@@ -1,0 +1,55 @@
+/* Navbar.css */
+
+#navBar {
+    padding: 10px;
+  }
+  
+  #menuBox {
+    display: flex;
+    gap: 15px;
+  }
+  
+  /* Hide menu items on small screens and show the hamburger menu */
+  .hamburgerMenu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  
+  .hamburgerMenu span {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 4px 0;
+  }
+  /* For screens below 768px */
+@media screen and (max-width: 768px) {
+    #menuBox {
+      display: none; /* Hide the menu on smaller screens */
+    }
+  
+    .hamburgerMenu {
+      display: flex; /* Show the hamburger menu */
+      margin-top: 10px; /* Adjust this value to move the hamburger lower */
+    }
+  
+    /* When the menu is open, display the menu items */
+    #menuBox.open {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 60px; /* Adjust as per your design */
+      right: 10px;
+      background-color: white;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      z-index: 1000;
+    }
+  
+    .menuItem, .btn {
+      color: black;
+      padding: 10px;
+      text-align: center;
+    }
+  }
+  

@@ -4,12 +4,10 @@ import Navbar from '../components/Navbar';
 export default function Leaderboard() {
   const [teams, setTeams] = useState([]);
 
-  // Fetch teams data from the API
   useEffect(() => {
     fetch('https://mpl-be-p5xf.onrender.com/teams/getTeamsByScore')
       .then((response) => response.json())
       .then((data) => {
-        // Sort teams by score in descending order
         const sortedTeams = data.sort((a, b) => b.score - a.score);
         setTeams(sortedTeams);
       })
@@ -23,6 +21,7 @@ export default function Leaderboard() {
         <div id="huntSection" className="flex column">
           <p className="titleHeadText">Leaderboard</p>
           <div id="clueSection" className="flex row">
+         
             <div id="leadertableSection">
               <table className="tbl" id="leaderboardtable">
                 <thead>

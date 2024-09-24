@@ -17,7 +17,7 @@ export default function Navbar() {
         <p className='menuItem' onClick={(e) => handleNavClick(e, '/leaderboard')}>Leaderboard</p>
         <p className='menuItem' onClick={(e) => handleNavClick(e, '/treasure-hunt')}>Treasure Hunt</p>
         {/* <p className='menuItem' onClick={(e) => handleNavClick(e, '/jeopardy')}>Jeopardy</p> */}
-        <p className='menuItem' onClick={(e) => handleNavClick(e, '/admin')}>Admin</p>
+        {/* <p className='menuItem' onClick={(e) => handleNavClick(e, '/admin')}>Admin</p> */}
         <button className='btn accentShade' onClick={(e) => handleNavClick(e, '/teams')}>Create Team</button>
       </div>
     </div>

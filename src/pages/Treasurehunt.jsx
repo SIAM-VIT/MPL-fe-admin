@@ -103,20 +103,6 @@ export default function Treasurehunt() {
               </div>
               <p className="message">{message}</p>
             </div>
-            <div id="tableSection">
-                <table className='tbl'>
-                  <thead>
-                    <tr className='headerRow'><th>Clue</th><th>Organiser</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr><td className='bold'>Clue 1</td><td>Organiser 1</td></tr>
-                    <tr><td className='bold'>Clue 2</td><td>Organiser 2</td></tr>
-                    <tr><td className='bold'>Clue 3</td><td>Organiser 3</td></tr>
-                    <tr><td className='bold'>Clue 4</td><td>Organiser 4</td></tr>
-                    <tr><td className='bold'>Clue 5</td><td>Organiser 5</td></tr>
-                  </tbody>
-                </table>
-            </div>
           </div>
         </div>
       </div>

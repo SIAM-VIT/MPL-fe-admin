@@ -1,0 +1,127 @@
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .leaderboard-content {
+    flex-grow: 1;
+    padding: 1rem;
+  }
+  
+  .leaderboard-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .leaderboard-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .top-teams-section {
+    width: 100%;
+  }
+  
+  .top-team-card {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .rank-badge {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+  }
+  
+  .rank-1 { background-color: #ffd700; }
+  .rank-2 { background-color: #c0c0c0; }
+  .rank-3 { background-color: #cd7f32; }
+  
+  .team-info {
+    flex-grow: 1;
+  }
+  
+  .team-name {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+  
+  .team-score {
+    color: #666;
+  }
+  
+  .full-leaderboard-section {
+    width: 100%;
+  }
+  
+  .table-container {
+    overflow-x: auto;
+  }
+  
+  .leaderboard-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    overflow: hidden;
+  }
+  
+  .leaderboard-table th,
+  .leaderboard-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+  
+  .leaderboard-table thead {
+    background-color: #f3f4f6;
+  }
+  
+  .leaderboard-table .even-row {
+    background-color: #f9fafb;
+  }
+  
+  .leaderboard-table .odd-row {
+    background-color: white;
+  }
+  
+  .rank-cell {
+    font-weight: 600;
+  }
+  
+  @media (min-width: 1024px) {
+    .leaderboard-sections {
+      flex-direction: row;
+    }
+  
+    .top-teams-section {
+      width: 33.333%;
+    }
+  
+    .full-leaderboard-section {
+      width: 66.667%;
+    }
+  }

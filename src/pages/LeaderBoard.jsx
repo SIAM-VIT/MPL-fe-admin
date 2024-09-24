@@ -23,21 +23,7 @@ export default function Leaderboard() {
         <div id="huntSection" className="flex column">
           <p className="titleHeadText">Leaderboard</p>
           <div id="clueSection" className="flex row">
-            {/* <div id="leaderboardContainer" className="flex column">
-              {teams.slice(0, 3).map((team, index) => (
-                <div key={team.team_id} className="leaderBox flex row">
-                  <div id={`rank${index + 1}`} className="rankBox flex centerVH">
-                    <p className="rank">{index + 1}</p>
-                  </div>
-                  <div className="rankDetailBox flex column centerVH">
-                    <button className="btn_lite purpleShade">{team.team_name}</button>
-                    <p className="bold">{team.score.toLocaleString()} Pts.</p>
-                  </div>
-                </div>
-              ))} */}
-            {/* </div> */}
             <div id="leadertableSection">
-              {/* Render full leaderboard */}
               <table className="tbl" id="leaderboardtable">
                 <thead>
                   <tr className="headerRow">

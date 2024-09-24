@@ -1,8 +1,51 @@
-import React from 'react'
-import Navbar from '../components/Navbar'
-import eventFlow from '../assets/eventflowChart.svg'
+import React, { useState } from 'react';
+import Navbar from '../components/Navbar';
+import eventFlow from '../assets/eventflowChart.svg';
 
 export default function Team() {
+  const [teamName, setTeamName] = useState('');
+  const [leaderName, setLeaderName] = useState('');
+  const [member1Name, setMember1Name] = useState('');
+  const [member2Name, setMember2Name] = useState('');
+  const [member3Name, setMember3Name] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErrorMessage('');
+
+    const teamData = {
+      team_name: teamName,
+      team_members: [leaderName, member1Name, member2Name, member3Name].filter(Boolean)
+    };
+
+    try {
+      const response = await fetch('https://mpl-be-p5xf.onrender.com/teams/createTeam', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(teamData),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to create team');
+      }
+
+      const result = await response.json();
+      console.log('Team created:', result);
+      setErrorMessage('Successfully created team')
+      setTeamName('');
+      setLeaderName('');
+      setMember1Name('');
+      setMember2Name('');
+      setMember3Name('');
+    } catch (error) {
+      console.error('Error creating team:', error);
+      setErrorMessage('Failed to create team. Please try again.');
+    }
+  };
+
   return (
     <div id='Container' className='flex column'>
       <Navbar />
@@ -10,32 +53,65 @@ export default function Team() {
         <div id="huntSection" className='flex column'>
           <p className="titleHeadText">Treasure Hunt</p>
           <div id="clueSection" className='flex row space-between'>
-            <div id="clueForm" className='flex column'>
+            <form id="clueForm" className='flex column' onSubmit={handleSubmit}>
               <div className="inputBoxContainer flex row space-between align_items_center">
                 <p className="inputTitle">Team Name</p>
-                <input type="text" className='inputBox' placeholder='Enter Team Name'/>
+                <input
+                  type="text"
+                  className='inputBox'
+                  placeholder='Enter Team Name'
+                  value={teamName}
+                  onChange={(e) => setTeamName(e.target.value)}
+                  required
+                />
               </div>
               <div className="inputBoxContainer flex row space-between align_items_center">
-                <p className="inputTitle">Leader Reg No</p>
-                <input type="text" className='inputBox' placeholder='22ABC0000'/>
+                <p className="inputTitle">Leader Name</p>
+                <input
+                  type="text"
+                  className='inputBox'
+                  placeholder='John Doe'
+                  value={leaderName}
+                  onChange={(e) => setLeaderName(e.target.value)}
+                  required
+                />
               </div>
               <div className="inputBoxContainer flex row space-between align_items_center">
-                <p className="inputTitle">Member1 Reg No</p>
-                <input type="text" className='inputBox' placeholder='22ABC0000'/>
+                <p className="inputTitle">Member1 Name</p>
+                <input
+                  type="text"
+                  className='inputBox'
+                  placeholder='John Doe'
+                  value={member1Name}
+                  onChange={(e) => setMember1Name(e.target.value)}
+                />
               </div>
               <div className="inputBoxContainer flex row space-between align_items_center">
-                <p className="inputTitle">Member2 Reg No</p>
-                <input type="text" className='inputBox' placeholder='22ABC0000'/>
+                <p className="inputTitle">Member2 Name</p>
+                <input
+                  type="text"
+                  className='inputBox'
+                  placeholder='John Doe'
+                  value={member2Name}
+                  onChange={(e) => setMember2Name(e.target.value)}
+                />
               </div>
               <div className="inputBoxContainer flex row space-between align_items_center">
-                <p className="inputTitle">Member3 Reg No</p>
-                <input type="text" className='inputBox' placeholder='22ABC0000'/>
+                <p className="inputTitle">Member3 Name</p>
+                <input
+                  type="text"
+                  className='inputBox'
+                  placeholder='John Doe'
+                  value={member3Name}
+                  onChange={(e) => setMember3Name(e.target.value)}
+                />
               </div>
               <div className='flex row' id='clueFormBtnContainer'>
-                <button className='btn_lite purpleShade'>SUBMIT</button>
+                <button type="submit" className='btn_lite purpleShade'>SUBMIT</button>
               </div>
-              <p className="errorMessage">Team Creation Error</p>
-            </div>
+              {errorMessage && <p className="errorMessage">{errorMessage}</p>}
+            </form>
+ 
             <div id="aboutSection" className='flex column'>
               <p className="titleHeadText">About MPL</p>
               

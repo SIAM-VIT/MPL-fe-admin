@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 body {
-  font-family: "Inter", system-ui;
+  font-family: "Poppins", system-ui;
   font-optical-sizing: auto;
   font-style: normal;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 a {
@@ -86,12 +86,13 @@ a {
   border-radius: 6px;
   padding: 0 24px;
   box-shadow: var(--defaultBoxShadow);
+  align-items: center;
 }
 
 #menuBox {
   color: var(--textWhite);
-  font-size: 14px;
-  gap: 18px;
+  font-size: 20px;
+  gap: 30px;
 }
 
 .selectedMenuItem {
@@ -108,11 +109,12 @@ a {
 }
 
 .btn {
-  padding: 12px 18px;
+  padding: 12px 14px;
   border: none;
   outline: none;
+  font-size: 17px;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 10px;
   cursor: pointer;
   width: fit-content;
   transition: all 0.3s ease-in-out;
@@ -207,6 +209,7 @@ a {
   background-size: contain;
   background-position: center center;
   height: 100%;
+  max-width: 100%;
 }
 
 #btnHolder {
@@ -520,7 +523,7 @@ input:focus {
 
 /* Absolute Reference */
 #mplLogo {
-  height: 74px;
+  height: 120px;
   width: fit-content;
   cursor: pointer;
 }
@@ -554,6 +557,12 @@ input:focus {
     text-decoration: underline;
   }
 
+  #menuBox {
+    color: var(--textWhite);
+    font-size: 15px;
+    gap: 20px;
+  }
+
   .heroHeadText1 {
     width: 98.5vw;
     font-family: "Poppins", sans-serif;
@@ -564,7 +573,8 @@ input:focus {
   }
 
   #Container {
-    width: auto;
+    width: 100svw;
+    /* height: 100%; */
   }
 
   .btn {
@@ -573,10 +583,9 @@ input:focus {
 
   #btnHolder {
     position: absolute;
-    top: 60%;
+    top: 95%;
     left: 20%;
     position: absolute;
-    top: 60%;
     left: -1%;
     z-index: 10000;
     pointer-events: auto;
@@ -586,12 +595,12 @@ input:focus {
     margin: 0px 25px 0px 0px;
     font-weight: bold;
     font-size: 20px;
-    text-align: justify;
+    text-align: left;
     margin-top: 50px;
   }
 
   #heroTextSection {
-    height: 100vh;
+    height: 70vh;
     width: 98.5vw;
     position: absolute;
     top: 15%;
@@ -603,10 +612,16 @@ input:focus {
   #puzzleImage {
     width: fit-content;
     height: 60vh;
-    width: 100vw;
+    max-width: 100vw;
     position: absolute;
     left: 5%;
     opacity: 0.2;
     pointer-events: none;
+  }
+
+  #mplLogo {
+    height: 97px;
+    width: fit-content;
+    cursor: pointer;
   }
 }

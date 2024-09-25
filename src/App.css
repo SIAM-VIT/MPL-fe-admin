@@ -194,6 +194,7 @@ a {
 .heroHeadText {
   font-size: 72px;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .heroSubText {
@@ -495,6 +496,14 @@ input:focus {
   width: 13svw;
 }
 
+.heroHeadText1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  text-decoration: underline;
+}
+
 /* Events  */
 .menuItem:hover {
   transform: scale(1.05);
@@ -558,15 +567,25 @@ input:focus {
     width: auto;
   }
 
+  .btn {
+    touch-action: manipulation;
+  }
+
   #btnHolder {
     position: absolute;
     top: 60%;
     left: 20%;
+    position: absolute;
+    top: 60%;
+    left: -1%;
+    z-index: 10000;
+    pointer-events: auto;
   }
 
   .heroSubText {
     margin: 0px 25px 0px 0px;
     font-weight: bold;
+    font-size: 20px;
     text-align: justify;
     margin-top: 50px;
   }
@@ -588,5 +607,6 @@ input:focus {
     position: absolute;
     left: 5%;
     opacity: 0.2;
+    pointer-events: none;
   }
 }

@@ -25,8 +25,9 @@ export default function Homepage() {
               <button className="btn roundBtn purpleShade">Get Started</button>
             </Link>
             <Link to="/teams">
-              <button className="btnUnderline">Create Team</button>
-            </Link>
+            <button className="btn roundBtn purpleShade" onClick={() => console.log('Button clicked')}>
+  Create Team
+</button> </Link>
           </div>
         </div>
         <div id="heroImageSection" className="flex column centerVH">

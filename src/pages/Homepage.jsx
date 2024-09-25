@@ -1,6 +1,7 @@
-import React from "react";
+import { React, useState } from "react";
 import Navbar from "../components/Navbar";
 import PuzzleImage from "../assets/heroPageElement.svg";
+import { Link } from "react-router-dom";
 
 export default function Homepage() {
   return (
@@ -20,8 +21,12 @@ export default function Homepage() {
             test your skills and teamwork.
           </p>
           <div id="btnHolder" className="flex row align_items_center">
-            <button className="btn roundBtn purpleShade">Get Started</button>
-            <p className="btnUnderline">Create Team</p>
+            <Link to="/teams">
+              <button className="btn roundBtn purpleShade">Get Started</button>
+            </Link>
+            <Link to="/teams">
+              <button className="btnUnderline">Create Team</button>
+            </Link>
           </div>
         </div>
         <div id="heroImageSection" className="flex column centerVH">

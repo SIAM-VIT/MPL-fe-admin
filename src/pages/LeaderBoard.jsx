@@ -31,7 +31,7 @@ export default function Leaderboard() {
                     <th>Points</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody  style={{backgroundColor: "white"}}>
                   {teams.map((team, index) => (
                     <tr key={team.team_id}>
                       <td className="bold">{index + 1}</td>

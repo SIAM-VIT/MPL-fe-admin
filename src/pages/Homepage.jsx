@@ -9,7 +9,7 @@ export default function Homepage() {
         <div id="bodyContainer" className='flex row space-between align_items_center'>
           <div id="heroTextSection" className='flex column'>
             <p className="heroHeadText">Get Ready for the Ultimate Fun !</p>
-            <p className="heroSubText">ji.</p>
+            <p className="heroSubText">Why yall looking at home huh. Look at the other pages this page aint for yall</p>
             <div id="btnHolder" className='flex row align_items_center'>
               <button className='btn roundBtn purpleShade'>Get Started</button>
               <p className='btnUnderline'>Create Team</p>

@@ -7,7 +7,6 @@ export default function Homepage() {
   const navigate = useNavigate();
   const navtoteams = () => {
     navigate("/teams");
-    console.log("button clicked");
   };
   return (
     <div id="Container" className="flex column">

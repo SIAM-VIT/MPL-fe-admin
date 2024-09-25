@@ -16,9 +16,13 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  const navtohome = () => {
+    nav("/home");
+  };
+
   return (
     <div id="navBar" className="flex row space-between">
-      <img src={logo} id="mplLogo" alt="MPL Logo" />
+      <img src={logo} id="mplLogo" alt="MPL Logo" onClick={navtohome} />
       <div className="hamburgerMenu" onClick={toggleMenu}>
         <span></span>
         <span></span>

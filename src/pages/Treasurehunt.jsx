@@ -66,6 +66,43 @@ export default function Treasurehunt() {
     
   };
 
+  const handleViewProgress = async () => {
+    if (!selectedTeam) {
+      setMessage("Please select a team first");
+      return;
+    }
+
+    const team = teams.find((t) => t.team_name === selectedTeam);
+    if (!team) {
+      setMessage("Selected team not found.");
+      return;
+    }
+
+    try {
+      const response = await fetch(
+        `https://mpl-be-p5xf.onrender.com/teams/getTeamHint/${team.team_id}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+    
+      const responseData = await response.json();
+    
+      if (response.ok) {
+        setMessage(`Team hint: ${responseData.data}`,);
+      } else {
+        setMessage(`Error: ${responseData.data || "Failed to verify clue."}`);
+      }
+    } catch (error) {
+      console.error("Error viewing progress clue:", error);
+      setMessage(`Error: ${error}`);
+    }
+    
+  };
+
   return (
     <div id="Container" className="flex column">
       <Navbar widthClass="custom-width2" />
@@ -107,7 +144,10 @@ export default function Treasurehunt() {
                 </div>
               </div>
               <div className="flex row" id="clueFormBtnContainer">
-                <button className="btn_lite purpleShade">VIEW PROGRESS</button>
+                <button 
+                className="btn_lite purpleShade"
+                onClick={handleViewProgress}
+                >VIEW PROGRESS</button>
                 <button
                   className="btn_lite purpleShade"
                   onClick={handleVerifyClue}

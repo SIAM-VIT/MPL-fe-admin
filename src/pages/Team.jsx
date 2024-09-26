@@ -39,7 +39,7 @@ export default function Team() {
 
       const result = await response.json();
       console.log("Team created:", result);
-      setErrorMessage("Successfully created team");
+      setErrorMessage("Successfully created team!");
       setTeamName("");
       setLeaderName("");
       setMember1Name("");
@@ -53,7 +53,7 @@ export default function Team() {
 
   return (
     <div id="Container" className="flex column">
-      <Navbar />
+      <Navbar widthClass="custom-width" />
       <div id="bodyContainer">
         <div id="huntSection" className="flex column">
           <p className="titleHeadText">Treasure Hunt - Create team</p>
@@ -112,7 +112,11 @@ export default function Team() {
                 />
               </div>
               <div className="flex row" id="clueFormBtnContainer">
-                <button type="submit" className="btn_lite purpleShade">
+                <button
+                  type="submit"
+                  className="btn_lite purpleShade"
+                  id="submit"
+                >
                   SUBMIT
                 </button>
               </div>

@@ -258,7 +258,7 @@ a {
   padding: 10px 5px;
   font-size: 14px;
   border: 1px solid var(--Secondary);
-  width: 36svw;
+  width: fit-content;
   border-radius: 5px;
 }
 
@@ -292,6 +292,12 @@ input:focus {
   font-weight: bold;
   font-size: 24px;
   cursor: pointer;
+  border: 2px solid transparent; /* Default border */
+}
+
+.clueBox:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0px 0px 15px red; /* Red border on focus */
 }
 
 #Cbox1 {
@@ -317,8 +323,9 @@ input:focus {
 .errorMessage {
   color: red;
   display: block;
-  align-self: flex-end;
-  font-size: 14px;
+  align-self: center;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .tbl {
@@ -573,8 +580,25 @@ input:focus {
     text-decoration: underline;
   }
 
+  .inputBox {
+    margin-right: 5svw;
+  }
+
   .inputBoxContainer {
     gap: 55px;
+  }
+
+  .inputboxcontainer {
+    gap: 15px;
+  }
+
+  #submit {
+    font-size: 25px;
+  }
+
+  #clueForm {
+    width: 100svw;
+    gap: 24px;
   }
 
   #menuBox {
@@ -629,6 +653,10 @@ input:focus {
     text-align: justify;
     font-weight: bold;
     margin-right: auto;
+  }
+
+  #aboutSection {
+    display: none;
   }
 
   #puzzleImage {

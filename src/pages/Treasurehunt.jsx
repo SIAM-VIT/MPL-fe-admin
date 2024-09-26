@@ -51,11 +51,13 @@ export default function Treasurehunt() {
           body: JSON.stringify({ hint: selectedClue }),
         }
       );
-    
+
       const responseData = await response.json();
-    
+
       if (response.ok) {
-        setMessage(`Clue verified successfully! New score: ${responseData.data}`,);
+        setMessage(
+          `Clue verified successfully! New score: ${responseData.data}`
+        );
       } else {
         setMessage(`Error: ${responseData.data || "Failed to verify clue."}`);
       }
@@ -63,7 +65,6 @@ export default function Treasurehunt() {
       console.error("Error verifying clue:", error);
       setMessage("Error verifying clue. Please try again.");
     }
-    
   };
 
   const handleViewProgress = async () => {
@@ -88,11 +89,11 @@ export default function Treasurehunt() {
           },
         }
       );
-    
+
       const responseData = await response.json();
-    
+
       if (response.ok) {
-        setMessage(`Team hint: ${responseData.data}`,);
+        setMessage(`Team hint: ${responseData.data}`);
       } else {
         setMessage(`Error: ${responseData.data || "Failed to verify clue."}`);
       }
@@ -100,7 +101,6 @@ export default function Treasurehunt() {
       console.error("Error viewing progress clue:", error);
       setMessage(`Error: ${error}`);
     }
-    
   };
 
   return (
@@ -136,6 +136,7 @@ export default function Treasurehunt() {
                         selectedClue === clue ? "selected" : ""
                       }`}
                       id={`Cbox${clue}`}
+                      tabIndex="0" /* Allows focus */
                       onClick={() => handleClueClick(clue)}
                     >
                       <p className="clueno">{clue}</p>
@@ -144,10 +145,12 @@ export default function Treasurehunt() {
                 </div>
               </div>
               <div className="flex row" id="clueFormBtnContainer">
-                <button 
-                className="btn_lite purpleShade"
-                onClick={handleViewProgress}
-                >VIEW PROGRESS</button>
+                <button
+                  className="btn_lite purpleShade"
+                  onClick={handleViewProgress}
+                >
+                  VIEW PROGRESS
+                </button>
                 <button
                   className="btn_lite purpleShade"
                   onClick={handleVerifyClue}
@@ -155,7 +158,7 @@ export default function Treasurehunt() {
                   VERIFY CLUE
                 </button>
               </div>
-              <p className="message">{message}</p>
+              <p className="errorMessage">{message}</p>
             </div>
           </div>
         </div>

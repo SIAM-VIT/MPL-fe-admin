@@ -265,14 +265,14 @@ a {
 #huntSection2 {
   flex-grow: 1;
   gap: 24px;
-  height: 80svh;
+  height: 90svh;
   /* width: auto; */
   overflow-y: auto;
 }
 
 #clueSection2 {
   gap: 72px;
-  height: 80svh;
+  height: 90svh;
   /* width: auto; */
   overflow-y: auto;
 }

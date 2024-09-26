@@ -394,6 +394,7 @@ input:focus {
   /* margin-bottom: 20px; */
 }
 
+
 #leaderboardtable tr:first-child {
   background-color: var(--Secondary) !important;
 }

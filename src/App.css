@@ -323,8 +323,9 @@ input:focus {
 .errorMessage {
   color: red;
   display: block;
-  align-self: flex-end;
-  font-size: 14px;
+  align-self: center;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .tbl {
@@ -591,6 +592,15 @@ input:focus {
     gap: 15px;
   }
 
+  #submit {
+    font-size: 25px;
+  }
+
+  #clueForm {
+    width: 100svw;
+    gap: 24px;
+  }
+
   #menuBox {
     color: var(--textWhite);
     font-size: 15px;
@@ -643,6 +653,10 @@ input:focus {
     text-align: justify;
     font-weight: bold;
     margin-right: auto;
+  }
+
+  #aboutSection {
+    display: none;
   }
 
   #puzzleImage {

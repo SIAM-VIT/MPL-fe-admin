@@ -54,10 +54,10 @@ export default function Team() {
   return (
     <div id="Container" className="flex column">
       <Navbar widthClass="custom-width" />
-      <div id="bodyContainer">
-        <div id="huntSection" className="flex column">
+      <div id="bodyContainer2">
+        <div id="huntSection1" className="flex column">
           <p className="titleHeadText">Treasure Hunt - Create team</p>
-          <div id="clueSection" className="flex row space-between">
+          <div id="clueSection1" className="flex row space-between">
             <form id="clueForm" className="flex column" onSubmit={handleSubmit}>
               <div className="inputBoxContainer flex row space-between align_items_center">
                 <p className="inputTitle">Team Name</p>

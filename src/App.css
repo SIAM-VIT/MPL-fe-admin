@@ -200,6 +200,14 @@ a {
   color: var(--text);
 }
 
+#bodyContainer2 {
+  flex-grow: 1;
+  padding: 5px;
+  gap: 120px;
+  color: var(--text);
+  height: 50svh;
+}
+
 #heroTextSection {
   gap: 24px;
 }
@@ -236,6 +244,19 @@ a {
 #clueSection {
   gap: 72px;
   height: 212vh;
+}
+
+#huntSection1 {
+  flex-grow: 1;
+  gap: 24px;
+  height: 85svh;
+  overflow-y: auto;
+}
+
+#clueSection1 {
+  gap: 72px;
+  height: 85svh;
+  overflow-y: auto;
 }
 
 #bgSection {

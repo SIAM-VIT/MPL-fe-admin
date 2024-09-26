@@ -107,9 +107,9 @@ export default function Treasurehunt() {
     <div id="Container" className="flex column">
       <Navbar widthClass="custom-width2" />
       <div id="bodyContainer1">
-        <div id="huntSection" className="flex column">
+        <div id="huntSection1" className="flex column">
           <p className="titleHeadText">Treasure Hunt - Update Team Hint</p>
-          <div id="clueSection" className="flex row">
+          <div id="clueSection1" className="flex row">
             <div id="clueForm" className="flex column">
               <div className="inputBoxContainer flex row align_items_center space-between">
                 <p className="inputTitle">Team Name</p>

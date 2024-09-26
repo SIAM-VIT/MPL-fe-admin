@@ -249,13 +249,15 @@ a {
 #huntSection1 {
   flex-grow: 1;
   gap: 24px;
-  height: 85svh;
+  height: 90svh;
+  width: auto;
   overflow-y: auto;
 }
 
 #clueSection1 {
   gap: 72px;
-  height: 85svh;
+  height: 90svh;
+  width: auto;
   overflow-y: auto;
 }
 

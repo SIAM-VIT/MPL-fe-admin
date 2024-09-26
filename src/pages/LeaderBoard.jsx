@@ -17,7 +17,7 @@ export default function Leaderboard() {
   return (
     <div id="Container" className="flex column">
       <Navbar widthClass="custom-width" />
-      <div id="bodyContainer">
+      <div id="bodyContainer1">
         <div id="huntSection" className="flex column">
           <p className="titleHeadText">Leaderboard</p>
           <div id="clueSection" className="flex row">

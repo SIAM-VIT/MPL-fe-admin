@@ -7,6 +7,10 @@ body {
   /* overflow: hidden; */
 }
 
+* {
+  font-family: "Poppins", system-ui;
+}
+
 a {
   text-decoration: none;
 }
@@ -125,12 +129,12 @@ a {
 }
 
 .btn_lite {
-  font-size: 12px;
-  padding: 8px 18px;
+  font-size: 15px;
+  padding: 10px 20px;
   border: none;
   outline: none;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 10px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
@@ -238,7 +242,11 @@ a {
 }
 
 .inputBoxContainer {
-  gap: 24px;
+  gap: 55px;
+}
+
+.inputboxcontainer {
+  gap: 25px;
 }
 
 .inputTitle {
@@ -250,7 +258,7 @@ a {
   padding: 10px 5px;
   font-size: 14px;
   border: 1px solid var(--Secondary);
-  width: 31svw;
+  width: 36svw;
   border-radius: 5px;
 }
 
@@ -266,8 +274,10 @@ input:focus {
 }
 
 #clueFormBtnContainer {
-  gap: 24px;
-  justify-content: right;
+  gap: 25px;
+  justify-content: space-evenly;
+  margin-top: 3svh;
+  margin-left: 3svw;
 }
 
 #clueBoxContainer {
@@ -561,6 +571,10 @@ input:focus {
     font-style: normal;
     font-size: 60px;
     text-decoration: underline;
+  }
+
+  .inputBoxContainer {
+    gap: 55px;
   }
 
   #menuBox {

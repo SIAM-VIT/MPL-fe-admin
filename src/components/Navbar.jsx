@@ -16,9 +16,13 @@ export default function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  const navtohome = () => {
+    nav("/home");
+  };
+
   return (
     <div id="navBar" className="flex row space-between">
-      <img src={logo} id="mplLogo" alt="MPL Logo" />
+      <img src={logo} id="mplLogo" alt="MPL Logo" onClick={navtohome} />
       <div className="hamburgerMenu" onClick={toggleMenu}>
         <span></span>
         <span></span>
@@ -46,7 +50,7 @@ export default function Navbar() {
         {/* <p className='menuItem' onClick={(e) => handleNavClick(e, '/jeopardy')}>Jeopardy</p>
         <p className='menuItem' onClick={(e) => handleNavClick(e, '/admin')}>Admin</p> */}
         <button
-          className="btn accentShade"
+          className="btn1 accentShade"
           onClick={(e) => handleNavClick(e, "/teams")}
         >
           Create Team

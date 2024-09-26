@@ -223,10 +223,12 @@ a {
 #huntSection {
   flex-grow: 1;
   gap: 24px;
+  height: 212svh;
 }
 
 #clueSection {
   gap: 72px;
+  height: 212vh;
 }
 
 #bgSection {
@@ -371,9 +373,8 @@ input:focus {
 }
 
 #leadertableSection {
-  height: 69vh;
+  height: 212svh;
   /* overflow-y: scroll; */
-  border-bottom: 2px solid var(--Secondary);
 }
 
 .tbl .bold {

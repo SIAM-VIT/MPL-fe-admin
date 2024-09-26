@@ -51,17 +51,19 @@ export default function Treasurehunt() {
           body: JSON.stringify({ hint: selectedClue }),
         }
       );
-
+    
+      const responseData = await response.json();
+    
       if (response.ok) {
-        setMessage("Clue verified successfully!");
+        setMessage(`Clue verified successfully! New score: ${responseData.data}`,);
       } else {
-        const errorData = await response.json();
-        setMessage(`Error: ${errorData.message || "Failed to verify clue."}`);
+        setMessage(`Error: ${responseData.data || "Failed to verify clue."}`);
       }
     } catch (error) {
       console.error("Error verifying clue:", error);
       setMessage("Error verifying clue. Please try again.");
     }
+    
   };
 
   return (

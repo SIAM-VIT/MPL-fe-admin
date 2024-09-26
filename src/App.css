@@ -188,7 +188,7 @@ a {
 
 #bodyContainer {
   flex-grow: 1;
-  padding: 24px;
+  padding: 24px; /* change this to 24px if not working on all devices */
   gap: 120px;
   color: var(--text);
 }
@@ -202,10 +202,11 @@ a {
 
 #bodyContainer2 {
   flex-grow: 1;
-  padding: 5px;
+  padding: 10px;
   gap: 120px;
   color: var(--text);
-  height: 50svh;
+  height: 30svh;
+  margin-top: 3svh;
 }
 
 #heroTextSection {
@@ -250,14 +251,29 @@ a {
   flex-grow: 1;
   gap: 24px;
   height: 90svh;
-  width: auto;
+  /* width: auto; */
   overflow-y: auto;
 }
 
 #clueSection1 {
   gap: 72px;
   height: 90svh;
-  width: auto;
+  /* width: auto; */
+  overflow-y: auto;
+}
+
+#huntSection2 {
+  flex-grow: 1;
+  gap: 24px;
+  height: 80svh;
+  /* width: auto; */
+  overflow-y: auto;
+}
+
+#clueSection2 {
+  gap: 72px;
+  height: 80svh;
+  /* width: auto; */
   overflow-y: auto;
 }
 
@@ -291,6 +307,14 @@ a {
   font-size: 14px;
   border: 1px solid var(--Secondary);
   width: fit-content;
+  border-radius: 5px;
+}
+
+.inputBox1 {
+  padding: 10px 5px;
+  font-size: 14px;
+  border: 1px solid var(--Secondary);
+  width: 40svw;
   border-radius: 5px;
 }
 

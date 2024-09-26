@@ -55,15 +55,15 @@ export default function Team() {
     <div id="Container" className="flex column">
       <Navbar widthClass="custom-width" />
       <div id="bodyContainer2">
-        <div id="huntSection1" className="flex column">
+        <div id="huntSection2" className="flex column">
           <p className="titleHeadText">Treasure Hunt - Create team</p>
-          <div id="clueSection1" className="flex row space-between">
+          <div id="clueSection2" className="flex row space-between">
             <form id="clueForm" className="flex column" onSubmit={handleSubmit}>
               <div className="inputBoxContainer flex row space-between align_items_center">
                 <p className="inputTitle">Team Name</p>
                 <input
                   type="text"
-                  className="inputBox"
+                  className="inputBox1"
                   placeholder="Enter Team Name"
                   value={teamName}
                   onChange={(e) => setTeamName(e.target.value)}
@@ -74,7 +74,7 @@ export default function Team() {
                 <p className="inputTitle">Leader Name</p>
                 <input
                   type="text"
-                  className="inputBox"
+                  className="inputBox1"
                   placeholder="John Doe"
                   value={leaderName}
                   onChange={(e) => setLeaderName(e.target.value)}
@@ -85,7 +85,7 @@ export default function Team() {
                 <p className="inputTitle">Member1 Name</p>
                 <input
                   type="text"
-                  className="inputBox"
+                  className="inputBox1"
                   placeholder="John Doe"
                   value={member1Name}
                   onChange={(e) => setMember1Name(e.target.value)}
@@ -95,7 +95,7 @@ export default function Team() {
                 <p className="inputTitle">Member2 Name</p>
                 <input
                   type="text"
-                  className="inputBox"
+                  className="inputBox1"
                   placeholder="John Doe"
                   value={member2Name}
                   onChange={(e) => setMember2Name(e.target.value)}
@@ -105,7 +105,7 @@ export default function Team() {
                 <p className="inputTitle">Member3 Name</p>
                 <input
                   type="text"
-                  className="inputBox"
+                  className="inputBox1"
                   placeholder="John Doe"
                   value={member3Name}
                   onChange={(e) => setMember3Name(e.target.value)}

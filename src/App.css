@@ -391,6 +391,7 @@ input:focus {
   background-color: var(--Secondary) !important;
 }
 
+
 #leaderboardtable tr:nth-child(odd) {
   background-color: var(--primaryDarkv2);
 }

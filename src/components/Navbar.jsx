@@ -3,7 +3,7 @@ import "./Navbar.css";
 import logo from "../assets/MPLlogo.svg";
 import { useNavigate } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ widthClass }) {
   const nav = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -21,7 +21,7 @@ export default function Navbar() {
   };
 
   return (
-    <div id="navBar" className="flex row space-between">
+    <div id="navBar" className={`flex row space-between ${widthClass}`}>
       <img src={logo} id="mplLogo" alt="MPL Logo" onClick={navtohome} />
       <div className="hamburgerMenu" onClick={toggleMenu}>
         <span></span>
@@ -47,8 +47,12 @@ export default function Navbar() {
         >
           Treasure Hunt
         </p>
-        {/* <p className='menuItem' onClick={(e) => handleNavClick(e, '/jeopardy')}>Jeopardy</p>
-        <p className='menuItem' onClick={(e) => handleNavClick(e, '/admin')}>Admin</p> */}
+        {/* <p className="menuItem" onClick={(e) => handleNavClick(e, "/jeopardy")}>
+          Jeopardy
+        </p>
+        <p className="menuItem" onClick={(e) => handleNavClick(e, "/admin")}>
+          Admin
+        </p> */}
         <button
           className="btn1 accentShade"
           onClick={(e) => handleNavClick(e, "/teams")}

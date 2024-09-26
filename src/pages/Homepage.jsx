@@ -8,6 +8,9 @@ export default function Homepage() {
   const navtoteams = () => {
     navigate("/teams");
   };
+  const navtohunt = () => {
+    navigate("/treasure-hunt");
+  };
   return (
     <div id="Container" className="flex column">
       <Navbar />
@@ -27,10 +30,10 @@ export default function Homepage() {
           <div id="btnHolder" className="flex row align_items_center">
             <button
               className="btn roundBtn purpleShade"
-              onClick={navtoteams}
-              onTouchStart={navtoteams}
+              onClick={navtohunt}
+              onTouchStart={navtohunt}
             >
-              Get Started
+              Update Team Hint
             </button>
             <button
               className="btn roundBtn purpleShade"

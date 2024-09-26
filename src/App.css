@@ -227,15 +227,18 @@ a {
 
 #bgSection {
   height: 30%;
+  width: 103%;
+  margin-bottom: -7svw;
 }
 
 .titleHeadText {
   font-size: 28px;
   font-weight: bold;
+  text-decoration: underline;
 }
 
 .inputBoxContainer {
-  gap: 48px;
+  gap: 24px;
 }
 
 .inputTitle {
@@ -244,14 +247,16 @@ a {
 }
 
 .inputBox {
-  padding: 8px 12px;
+  padding: 10px 5px;
   font-size: 14px;
   border: 1px solid var(--Secondary);
-  width: 20svw;
+  width: 31svw;
+  border-radius: 5px;
 }
 
 #clueForm {
   gap: 24px;
+  width: 100%;
 }
 
 input:active,
@@ -350,7 +355,7 @@ input:focus {
 
 #leadertableSection {
   height: 69vh;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   border-bottom: 2px solid var(--Secondary);
 }
 
@@ -361,6 +366,7 @@ input:focus {
 #leaderboardtable th,
 #leaderboardtable td {
   padding: 8px 24px;
+  /* margin-bottom: 20px; */
 }
 
 #leaderboardtable tr:first-child {
@@ -590,7 +596,7 @@ input:focus {
     align-items: center;
     gap: 10px;
     margin-top: 3.5svh;
-    margin-right: 6.25svw;
+    margin-right: 7.5svw;
   }
 
   .heroSubText {

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import Navbar from '../components/Navbar'
+import React, { useState, useEffect } from "react";
+import Navbar from "../components/Navbar";
 
 export default function Treasurehunt() {
   const [teams, setTeams] = useState([]);
-  const [selectedTeam, setSelectedTeam] = useState('');
+  const [selectedTeam, setSelectedTeam] = useState("");
   const [selectedClue, setSelectedClue] = useState(null);
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = useState("");
 
   useEffect(() => {
     fetchTeams();
@@ -13,12 +13,14 @@ export default function Treasurehunt() {
 
   const fetchTeams = async () => {
     try {
-      const response = await fetch('https://mpl-be-p5xf.onrender.com/teams/getAllTeams');
+      const response = await fetch(
+        "https://mpl-be-p5xf.onrender.com/teams/getAllTeams"
+      );
       const data = await response.json();
       setTeams(data);
     } catch (error) {
-      console.error('Error fetching teams:', error);
-      setMessage('Error fetching teams. Please try again.');
+      console.error("Error fetching teams:", error);
+      setMessage("Error fetching teams. Please try again.");
     }
   };
 
@@ -28,49 +30,52 @@ export default function Treasurehunt() {
 
   const handleVerifyClue = async () => {
     if (!selectedTeam || !selectedClue) {
-      setMessage('Please select a team and a clue first.');
+      setMessage("Please select a team and a clue first.");
       return;
     }
 
-    const team = teams.find(t => t.team_name === selectedTeam);
+    const team = teams.find((t) => t.team_name === selectedTeam);
     if (!team) {
-      setMessage('Selected team not found.');
+      setMessage("Selected team not found.");
       return;
     }
 
     try {
-      const response = await fetch(`https://mpl-be-p5xf.onrender.com/teams/updateHint/${team.team_id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ hint: selectedClue }),
-      });
+      const response = await fetch(
+        `https://mpl-be-p5xf.onrender.com/teams/updateHint/${team.team_id}`,
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ hint: selectedClue }),
+        }
+      );
 
       if (response.ok) {
-        setMessage('Clue verified successfully!');
+        setMessage("Clue verified successfully!");
       } else {
         const errorData = await response.json();
-        setMessage(`Error: ${errorData.message || 'Failed to verify clue.'}`);
+        setMessage(`Error: ${errorData.message || "Failed to verify clue."}`);
       }
     } catch (error) {
-      console.error('Error verifying clue:', error);
-      setMessage('Error verifying clue. Please try again.');
+      console.error("Error verifying clue:", error);
+      setMessage("Error verifying clue. Please try again.");
     }
   };
 
   return (
-    <div id='Container' className='flex column'>
-      <Navbar />
-      <div id="bodyContainer" >
-        <div id="huntSection" className='flex column'>
-          <p className="titleHeadText">Treasure Hunt</p>
-          <div id="clueSection" className='flex row'>
-            <div id="clueForm" className='flex column'>
+    <div id="Container" className="flex column">
+      <Navbar widthClass="custom-width2" />
+      <div id="bodyContainer">
+        <div id="huntSection" className="flex column">
+          <p className="titleHeadText">Treasure Hunt - Update Team Hint</p>
+          <div id="clueSection" className="flex row">
+            <div id="clueForm" className="flex column">
               <div className="inputBoxContainer flex row space-between align_items_center">
                 <p className="inputTitle">Team Name</p>
-                <select 
-                  className='inputBox'
+                <select
+                  className="inputBox"
                   value={selectedTeam}
                   onChange={(e) => setSelectedTeam(e.target.value)}
                 >
@@ -84,11 +89,13 @@ export default function Treasurehunt() {
               </div>
               <div className="inputBoxContainer flex row space-between align_items_center">
                 <p className="inputTitle">Clue No</p>
-                <div id="clueBoxContainer" className='flex row'>
+                <div id="clueBoxContainer" className="flex row">
                   {[1, 2, 3, 4, 5].map((clue) => (
-                    <div 
+                    <div
                       key={clue}
-                      className={`clueBox flex centerVH ${selectedClue === clue ? 'selected' : ''}`}
+                      className={`clueBox flex centerVH ${
+                        selectedClue === clue ? "selected" : ""
+                      }`}
                       id={`Cbox${clue}`}
                       onClick={() => handleClueClick(clue)}
                     >
@@ -97,16 +104,21 @@ export default function Treasurehunt() {
                   ))}
                 </div>
               </div>
-              <div className='flex row' id='clueFormBtnContainer'>
-                <button className='btn_lite purpleShade'>VIEW PROGRESS</button>
-                <button className='btn_lite purpleShade' onClick={handleVerifyClue}>VERIFY CLUE</button>
+              <div className="flex row" id="clueFormBtnContainer">
+                <button className="btn_lite purpleShade">VIEW PROGRESS</button>
+                <button
+                  className="btn_lite purpleShade"
+                  onClick={handleVerifyClue}
+                >
+                  VERIFY CLUE
+                </button>
               </div>
               <p className="message">{message}</p>
             </div>
           </div>
         </div>
       </div>
-      <div id="bgSection" className='patternBg'></div>
+      <div id="bgSection" className="patternBg"></div>
     </div>
-  )
+  );
 }

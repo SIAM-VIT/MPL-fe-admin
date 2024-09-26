@@ -1,29 +1,32 @@
-import React, { useEffect, useState } from 'react';
-import Navbar from '../components/Navbar';
+import React, { useEffect, useState } from "react";
+import Navbar from "../components/Navbar";
 
 export default function Leaderboard() {
   const [teams, setTeams] = useState([]);
 
   useEffect(() => {
-    fetch('https://mpl-be-p5xf.onrender.com/teams/getTeamsByScore')
+    fetch("https://mpl-be-p5xf.onrender.com/teams/getTeamsByScore")
       .then((response) => response.json())
       .then((data) => {
         const sortedTeams = data.sort((a, b) => b.score - a.score);
         setTeams(sortedTeams);
       })
-      .catch((error) => console.error('Error fetching teams:', error));
+      .catch((error) => console.error("Error fetching teams:", error));
   }, []);
 
   return (
     <div id="Container" className="flex column">
-      <Navbar />
+      <Navbar widthClass="custom-width" />
       <div id="bodyContainer">
         <div id="huntSection" className="flex column">
           <p className="titleHeadText">Leaderboard</p>
           <div id="clueSection" className="flex row">
-         
             <div id="leadertableSection">
-              <table className="tbl" id="leaderboardtable">
+              <table
+                className="tbl"
+                id="leaderboardtable"
+                style={{ marginBottom: "20px" }}
+              >
                 <thead>
                   <tr className="headerRow">
                     <th>Rank</th>
@@ -31,7 +34,7 @@ export default function Leaderboard() {
                     <th>Points</th>
                   </tr>
                 </thead>
-                <tbody  style={{backgroundColor: "white"}}>
+                <tbody style={{ backgroundColor: "white" }}>
                   {teams.map((team, index) => (
                     <tr key={team.team_id}>
                       <td className="bold">{index + 1}</td>
@@ -41,6 +44,7 @@ export default function Leaderboard() {
                   ))}
                 </tbody>
               </table>
+              <br />
             </div>
           </div>
         </div>

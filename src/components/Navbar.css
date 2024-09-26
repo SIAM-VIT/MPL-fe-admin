@@ -45,6 +45,14 @@
     margin: auto;
   }
 
+  .custom-width {
+    width: 93.5vw !important;
+  }
+
+  .custom-width2 {
+    width: 97.5vw !important;
+  }
+
   #menuBox {
     display: none; /* Hide the menu on smaller screens */
   }
@@ -70,21 +78,23 @@
   .menuItem {
     color: black;
     padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
     text-align: center;
   }
   .btn {
     color: white;
     padding: 15px;
     text-align: center;
-    font-size: 25px;
+    font-size: 19px;
   }
   .btn1 {
     color: white;
-    padding: 10px;
+    padding: 15px;
     text-align: center;
     border: none;
     color: black;
-    font-size: 15px;
-    border-radius: 4px;
+    font-size: 17px;
+    border-radius: 20px;
   }
 }

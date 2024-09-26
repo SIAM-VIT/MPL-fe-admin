@@ -51,11 +51,13 @@ export default function Treasurehunt() {
           body: JSON.stringify({ hint: selectedClue }),
         }
       );
-    
+
       const responseData = await response.json();
-    
+
       if (response.ok) {
-        setMessage(`Clue verified successfully! New score: ${responseData.data}`,);
+        setMessage(
+          `Clue verified successfully! New score: ${responseData.data}`
+        );
       } else {
         setMessage(`Error: ${responseData.data || "Failed to verify clue."}`);
       }
@@ -63,7 +65,6 @@ export default function Treasurehunt() {
       console.error("Error verifying clue:", error);
       setMessage("Error verifying clue. Please try again.");
     }
-    
   };
 
   return (
@@ -99,6 +100,7 @@ export default function Treasurehunt() {
                         selectedClue === clue ? "selected" : ""
                       }`}
                       id={`Cbox${clue}`}
+                      tabIndex="0" /* Allows focus */
                       onClick={() => handleClueClick(clue)}
                     >
                       <p className="clueno">{clue}</p>

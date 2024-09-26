@@ -72,7 +72,7 @@ export default function Treasurehunt() {
           <p className="titleHeadText">Treasure Hunt - Update Team Hint</p>
           <div id="clueSection" className="flex row">
             <div id="clueForm" className="flex column">
-              <div className="inputBoxContainer flex row space-between align_items_center">
+              <div className="inputBoxContainer flex row align_items_center space-between">
                 <p className="inputTitle">Team Name</p>
                 <select
                   className="inputBox"
@@ -87,7 +87,7 @@ export default function Treasurehunt() {
                   ))}
                 </select>
               </div>
-              <div className="inputBoxContainer flex row space-between align_items_center">
+              <div className="inputboxcontainer flex row space-between align_items_center">
                 <p className="inputTitle">Clue No</p>
                 <div id="clueBoxContainer" className="flex row">
                   {[1, 2, 3, 4, 5].map((clue) => (

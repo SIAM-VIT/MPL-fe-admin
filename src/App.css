@@ -193,6 +193,13 @@ a {
   color: var(--text);
 }
 
+#bodyContainer1 {
+  flex-grow: 1;
+  padding: 5px;
+  gap: 120px;
+  color: var(--text);
+}
+
 #heroTextSection {
   gap: 24px;
 }
@@ -390,7 +397,6 @@ input:focus {
 #leaderboardtable tr:first-child {
   background-color: var(--Secondary) !important;
 }
-
 
 #leaderboardtable tr:nth-child(odd) {
   background-color: var(--primaryDarkv2);

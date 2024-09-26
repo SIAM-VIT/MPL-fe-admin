@@ -106,7 +106,7 @@ export default function Treasurehunt() {
   return (
     <div id="Container" className="flex column">
       <Navbar widthClass="custom-width2" />
-      <div id="bodyContainer">
+      <div id="bodyContainer1">
         <div id="huntSection" className="flex column">
           <p className="titleHeadText">Treasure Hunt - Update Team Hint</p>
           <div id="clueSection" className="flex row">

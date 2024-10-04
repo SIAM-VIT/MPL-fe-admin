@@ -1,7 +1,7 @@
 <p align="center"><img src="https://imgur.com/Vp4LWt0.png" width=160 title="SIAM-VIT" alt="SIAM-VIT"></a>
 </p>
 <div align="center">
-  <h3 align="center">MPL Frontend Admin</h3>
+  <h3 align="center">2024 MPL Frontend Admin</h3>
 
   <p align="center">
     <a href="https://github.com/orgs/SIAM-VIT/repositories?q=mpl"><strong>Explore other MPL repositories</strong></a>
@@ -14,6 +14,7 @@
 </div>
 
 <!-- TABLE OF CONTENTS -->
+
 ## Table of Contents
 
 - [About The Project](#about-the-project)
@@ -24,11 +25,13 @@
 - [License](#license)
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
-This is the admin portal for the Math Premier League (MPL), SIAM-VIT's Flagship Event in VIT's fest, GraVITas 
+This is the admin portal for the 2024 Math Premier League (MPL), SIAM-VIT's Flagship Event in VIT's fest, GraVITas
 
 Key Features:
+
 - Create teams
 - Real time leaderboard monitoring
 - Team score updation and progress monitoring
@@ -40,6 +43,7 @@ This project is built using the following technologies and frameworks:
 - [ReactJS](https://react.dev/)
 
 <!-- GETTING STARTED -->
+
 ## Getting Started
 
 To get a local copy up and running, follow these simple steps.
@@ -81,7 +85,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-
 ## Contributors
 
 <table>
@@ -108,14 +111,25 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 				</a>
 			</p>
 		</td>
+		<td>
+		Nischitha N Shetty
+		<p align="center">
+			<img src = "https://avatars.githubusercontent.com/u/143122773?v=4" width="150" height="150" alt="Nischitha N Shetty">
+		</p>
+			<p align="center">
+				<a href = "https://github.com/NishaDev07">
+					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
+				</a>
+			</p>
+		</td>
 	</tr>
 </table>
 
-
 <!-- LICENSE -->
-## License
-Distributed under the MIT License. See LICENSE for more information.
 
+## License
+
+Distributed under the MIT License. See LICENSE for more information.
 
 <p align="center">
 	Made with :heart: by SIAM-VIT

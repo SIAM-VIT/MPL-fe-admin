@@ -44,14 +44,6 @@ This project is built using the following technologies and frameworks:
 
 To get a local copy up and running, follow these simple steps.
 
-### Prerequisites
-
-Make sure you have the following installed:
-
-- [Go](https://golang.org/doc/install)
-- PostgreSQL 13 or higher
-- Docker (optional but recommended)
-
 ## Available Scripts
 
 In the project directory, you can run:

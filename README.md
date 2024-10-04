@@ -111,6 +111,17 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 				</a>
 			</p>
 		</td>
+		<td>
+		Nischitha N Shetty
+		<p align="center">
+			<img src = "https://avatars.githubusercontent.com/u/143122773?v=4" width="150" height="150" alt="Nischitha N Shetty">
+		</p>
+			<p align="center">
+				<a href = "https://github.com/NishaDev07">
+					<img src = "http://www.iconninja.com/files/241/825/211/round-collaboration-social-github-code-circle-network-icon.svg" width="36" height = "36" alt="GitHub"/>
+				</a>
+			</p>
+		</td>
 	</tr>
 </table>
 

@@ -28,7 +28,7 @@
 
 ## About The Project
 
-This is the admin portal for the 2024 Math Premier League (MPL), SIAM-VIT's Flagship Event in VIT's fest, GraVITas
+This is the admin portal for the 2024 Math Premier League (MPL), SIAM-VIT's Flagship Event in VIT's fest, GraVITas'24. The portal is used by the admin to create teams, monitor the leaderboard in real time, update team scores and monitor the progress of the teams. The portal is built using ReactJS.
 
 Key Features:
 
@@ -40,7 +40,7 @@ Key Features:
 
 This project is built using the following technologies and frameworks:
 
-- [ReactJS](https://react.dev/)
+- [ReactJS](https://react.dev/) (A frameowrk for building user interfaces using JavaScript)
 
 <!-- GETTING STARTED -->
 

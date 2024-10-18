@@ -132,5 +132,5 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 Distributed under the MIT License. See LICENSE for more information.
 
 <p align="center">
-	Made with :heart: by SIAM-VIT
+	Made with :heart: by SIAM-VIT.
 </p>
